@@ -1,0 +1,32 @@
+/* 背景图片 不支持本地图片路径，仅支持网络地址和base64编码的图片 所以我转了base64的 */
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background: url("http://www.pifa-88.com/activity.web/images/home.png") no-repeat 0 -100rpx #fff;
+  background-size: cover;
+}
+/* 中间创建按钮 */
+.center-btn {
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  left: 20%;
+  height: 96rpx;
+  border: 4rpx solid rgba(255, 255, 255, .49);
+  border-radius: 4rpx;
+  overflow: hidden;
+  color: #fff;
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 96rpx;
+  /*box-shadow: 0 0 50rpx rgba(255,255,255,.75) inset;*/
+}
+.center-btn::before {
+  content: '+';
+  padding-right: 10rpx;
+  font-size: 36rpx;
+}

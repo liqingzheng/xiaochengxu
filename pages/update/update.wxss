@@ -1,0 +1,9 @@
+.w0 {
+  padding: 16rpx 0;
+}
+.weui-label {
+  color: #666;
+}
+.anticon-environment.reset {
+  float: right;
+}

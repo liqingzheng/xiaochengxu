@@ -1,0 +1,17 @@
+.weui-media-box__thumb {
+  border-radius:10px; 
+}
+.anticon {
+  font-size: 28rpx;
+}
+.anticon-man::before {
+  content: "\E6E2";  
+  color: #0091FF;
+}
+.anticon-woman::before {
+  content: "\E6EC";
+  color: #FF4D94;
+}
+.mobile {
+  padding-left: 10rpx;
+}

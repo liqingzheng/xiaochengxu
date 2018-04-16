@@ -1,0 +1,29 @@
+<view class="page g-mrg-top10">
+  <view class="page__bd">
+    <scroll-view scroll-y bindscrolltolower="pageCount" lower-threshold="10" style="{{'width: 100%;height:' + windowHeight + 'px;'}}">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_access" wx:for="{{arr}}">
+          <navigator class="weui-cell__bd" url="{{'../ViewActivity/ViewActivity?activityId=' + item.id}}">
+            <view class="weui-media-box__title">{{item.title}}</view>
+            <view class="weui-media-box__desc">
+              <view class="user-text">
+                <label>活动日期：</label>
+                <text>{{item.startDate}} - {{item.endDate}}</text>
+              </view>
+              <view class="user-text">
+                <label>报名人数：</label>
+                <text>{{item.joinCount}}</text>
+              </view>
+            </view>
+          </navigator>
+          <button wx:if="{{item.share}}" class="trans anticon anticon-share-alt" plain hover-class="none" open-type="share" data-title="{{item.title}}" id="{{item.id}}"></button>
+          <view wx:if="{{!item.share}}" class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+      </view>
+      <button class="trans more" plain hover-class='none' wx:if="{{page !== 0}}" bindtap='pageCount' disabled="{{moreFlag}}">{{moreText}}</button>
+    </scroll-view>
+    <view style='padding:0 20rpx;' hidden="{{hidden}}">
+      <alert type="{{alertType}}" title="" msg="{{infoTitle}}" icon-size="48"/>
+    </view>
+  </view>
+</view>

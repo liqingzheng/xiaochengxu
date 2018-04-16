@@ -1,0 +1,90 @@
+<form bindsubmit="bindFormSubmit">
+  <view class="page__bd">
+    <view class="banner">
+    </view>
+    <view class="weui-cells weui-cells_after-title g-mrg-top10">
+      <!-- 活动名称 -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <label class="weui-label">活动名称：</label>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name="activityName" id="activityName" placeholder="请输入15字的活动名称" maxlength="15" value="{{activityName}}"></input>
+        </view>
+      </view>
+      <!-- 日期 -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd txt-left">
+          <picker mode="date" class="pircker-date" value="{{startDate}}" bindchange="startDateChange">
+            <input name="startDate" hidden type="hidden" value="{{startDate}}"></input>
+            <view class="weui-input">{{startDate}}</view>
+          </picker>
+        </view>
+        <view class="weui-cell__hd">
+          <view class="weui-label txt-center" style="width: 30px;">至</view>
+        </view>
+        <view class="weui-cell__bd txt-right">
+          <picker mode="date" class="pircker-date" start="{{startDate}}" value="{{endDate}}" bindchange="endDateChange">
+            <input name="endDate" hidden type="hidden" value="{{endDate}}"></input>
+            <view class="weui-input">{{endDate}}</view>
+          </picker>
+        </view>
+      </view>
+      <!-- 地点 -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <label class="weui-label">活动地点：</label>
+        </view>
+        <view class="weui-cell__bd w0">
+          <!-- 如果没授权获取地点 就选择 -->
+          <picker mode="region" wx:if="{{!location}}" bindchange="bindRegionChange" value="{{region}}">
+            <view class="weui-input">{{region}}</view>
+            <input name="address" type="hidden" value="{{region}}"></input>
+          </picker>
+          <!-- 如果授权获取定位就弹出选择具体地点 -->
+          <view wx:if="{{location}}" class="location" bindtap="bindRegionChange">
+            <input name="address" type="hidden" value="{{address}}"></input>
+            <text>{{address}}</text>
+            <icon class="anticon anticon-environment reset color-primary"></icon>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 备注 -->
+    <view class="weui-cells weui-cells_after-title g-mrg-top10">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view style="height: 4rem" wx:if="{{descriptionvabel}}">{{description}}</view>
+          <textarea class="weui-textarea" wx:if="{{!descriptionvabel}}" id="description" name="description" placeholder="备注：费用及携带物品等" value="{{description}}" style="height: 4rem" />
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title g-mrg-top10">
+      <!-- 活动上限人数： -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <label class="weui-label">活动上限人数：</label>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="number" name="peopleNum" min="1" step="1" placeholder="输入整数" value="{{peopleNum}}"></input>
+        </view>
+      </view>
+      <!-- 截止报名时间： -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <label class="weui-label">截止报名时间：</label>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="weui-input">{{endDate}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部导航 -->
+  <view class="footer-btn">
+    <button class="nav bubble" data-noshare plain hover-class='none' formType="submit">保存活动</button>
+    <navigator class="nav active bubble" url="../user/user">用户中心</navigator>
+  </view>
+</form>
+<!-- 提示 -->
+<modal id='modal' content="{{modal.content}}" confirm-text="{{modal.confirmText}}" confirm-share="{{modal.confirmShare}}" bind:cancelEvent="_goToView"/>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "成员联系列表",
+  "usingComponents": {
+    "alert": "../../components/alert/alert"
+  }
+}

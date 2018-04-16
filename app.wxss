@@ -1,0 +1,188 @@
+/**app.wxss**/
+@import 'style/weui.wxss';
+page{
+    background-color: #F8F8F8;
+    font-size: 16px;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+.bubble, .container, .footer-btn, .nav, .item-flex, .banner, label, image, view,
+video, p, ul, li, div, em, h1, h2, h3, h4, h5, input, textarea, text, button {
+  box-sizing: border-box;
+  padding: 0;
+}
+textarea {
+  pointer-events: none;
+}
+form {
+  display: block;
+}
+input[type="hidden"] {
+  display: none;
+}
+button[disabled] {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+@font-face {
+  font-family: 'anticon';
+  src: url('https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i.eot');
+  /* IE9*/
+  src: url('https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i.woff') format('woff'),
+         /* chrome、firefox、opera、Safari,
+         Android,
+         iOS 4.2+*/ url('https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i.ttf') format('truetype'),
+         /* iOS 4.1- */ url('https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i.svg#iconfont') format('svg');
+}
+textarea {
+  background-color: #fff;
+}
+image {
+  vertical-align: middle;
+}
+.page__hd {
+    padding: 40px;
+}
+.page__bd {
+    padding-bottom: 40px;
+}
+.page__bd_spacing {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.page__ft{
+    padding-bottom: 10px;
+    text-align: center;
+}
+.page__title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+.page__desc {
+    margin-top: 5px;
+    color: #888888;
+    text-align: left;
+    font-size: 14px;
+}
+.anticon {
+  position: relative;
+  display: inline-block;
+  font-style: normal;
+  vertical-align: baseline;
+  font-size: 28rpx;
+  text-align: center;
+  text-transform: none;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.anticon::before {
+  display: inline-block;
+  font-family: "anticon" !important;
+}
+
+.anticon-right::before {
+  content: "\E61F";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  color: #bbb;
+  font-size: 28rpx;
+}
+.anticon-share-alt::before {
+  content: "\E671";
+}
+.anticon-phone:before {
+    content: "\E675";
+}
+.anticon-environment::before {
+  content: "\E685";
+}
+.g-mrg-top10 {
+  margin-top: 20rpx;
+}
+.color-primary {
+  color: #1890ff;
+}
+.txt-left {
+  text-align: left;
+}
+.txt-center {
+  text-align: center;
+}
+.txt-right {
+  text-align: right;
+}
+.bubble:after {
+  content: "";
+  background: rgba(255, 255, 255, 0.75);
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  left: -50%;
+  top: -50%;
+  opacity: 0;
+  border-radius: 50%;
+  margin: auto;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+.bubble:active:after {
+  transform: scale(0);
+  opacity: 1;
+  transition: 0s;
+}
+/* 底部导航 */
+.footer-btn {
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 96rpx;
+  background-color: #328fdd;
+  color: #fff;
+  z-index: 1;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer-btn > button.nav {
+  background-color: transparent;
+  color: inherit;
+  border-radius: 0;
+  border: 0;
+}
+
+.footer-btn > .nav, .footer-btn > button.nav {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  font-size: 30rpx;
+  line-height: 96rpx;
+  text-align: center;
+}
+
+.footer-btn > .nav.active, .footer-btn > button.nav.active {
+  background-color: #39a3fb;
+}
+ .banner {
+  position: relative;
+  width: 100%;
+  height: 240rpx;
+  background: url('http://www.pifa-88.com/activity.web/images/bg.jpg') no-repeat 0 0;
+  background-size: cover;
+}
+
+/* 列表 */
+button.trans {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  line-height: 1.2;
+  text-align: left;
+}
+
+

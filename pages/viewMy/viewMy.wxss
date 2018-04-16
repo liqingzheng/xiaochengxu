@@ -1,0 +1,25 @@
+.page__bd {
+  padding: 0;
+}
+.anticon-share-alt {
+  position: relative;
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #1890ff!important;
+  color: #fff!important;
+  text-align: center;
+}
+.anticon-share-alt::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+button.more {
+  display: block;
+  text-align: center;
+  margin: 20rpx;
+}
+button.more[disabled] {
+  color: #444!important;
+}

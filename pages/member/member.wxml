@@ -1,0 +1,48 @@
+<view class="page g-mrg-top10">
+  <view class="page__bd">
+    <!-- 第一个 -->
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_appmsg" >
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="{{avator}}"></image>
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">{{title}}</view>
+            <view class="weui-media-box__desc">
+              <view class="user-text">发起人：
+                <text>{{nickName}}</text>
+              </view>
+              <view class="user-text">联系电话：
+                <text class="color-primary" id="{{mobile}}" bindtap="callPhone">{{mobile || '...'}}</text>
+              </view>
+              <view class="user-text">参与人数：
+                <text class="color-primary">{{joinCount}}人</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 其他人信息 -->
+    <view class="weui-cells__title">参与者联系方式</view>
+    <view class="weui-cells weui-cells_after-title" hidden='{{!joinUsers.length}}'>
+      <view class="weui-cell" wx:for="{{joinUsers}}">
+        <view class="weui-cell__hd">
+          <image class="join-users-icon" src="{{item.avator || '../../image/icon_tabbar.png'}}"></image>
+        </view>
+        <view class="weui-cell__bd">{{item.nickName}}</view>
+        <view class="weui-cell__ft" id="{{item.mobile}}" bindtap="callPhone">tel: {{item.mobile}}</view>
+      </view>
+    </view>
+    <!-- loading -->
+    <view class="weui-loadmore" hidden='{{!laoding}}'>
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">数据加载中</view>
+    </view>
+    <!-- 提示信息 -->
+    <view style='padding:0 20rpx;' hidden="{{!noDataTips}}">
+      <alert type="{{alertType}}" title="" msg="{{infoTitle}}" icon-size="48" />
+    </view>
+  </view>
+</view>

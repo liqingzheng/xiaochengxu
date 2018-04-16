@@ -1,0 +1,10 @@
+@import '../../style/weui.wxss';
+.weui-msg {
+  padding-top: 10px;
+}
+.weui-msg__icon-area {
+  margin-bottom: 20rpx;
+}
+/* icon[type="info"] {
+  color: #999;
+}  */

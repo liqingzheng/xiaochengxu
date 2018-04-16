@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <navigator class="center-btn bubble" hover-class="none" url="{{ createdFlag ? '' : '../CreateActivity/CreateActivity'}}">创建活动</navigator>
+  <view class="footer-btn">
+    <navigator class="nav bubble" url="{{ createdFlag ? '' : '../CreateActivity/CreateActivity'}}">创建活动</navigator>
+    <navigator class="nav active bubble" url="{{userFlag ? '' : '../user/user'}}">用户中心</navigator>
+  </view>
+</view>

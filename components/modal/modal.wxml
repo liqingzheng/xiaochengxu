@@ -1,0 +1,11 @@
+<view class='dialog_container' hidden="{{!isShow}}">
+    <view class='mask'></view>
+    <view class='dialog'>
+        <view class='dialog-title'>{{ title }}</view>
+        <view class='dialog-content'>{{ content }}</view>
+        <view class='dialog-footer'>
+          <button class="dialog-btn" plain catchtap='_cancelEvent'>{{ cancelText }}</button>
+          <button class="dialog-btn" plain open-type="{{confirmShare ? 'share' : ''}}" catchtap='_confirmEvent'>{{ confirmText }}</button>
+        </view>
+    </view>
+</view>

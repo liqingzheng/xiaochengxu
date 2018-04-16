@@ -1,0 +1,61 @@
+button.edit {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #1890ff !important;
+  color: #fff !important;
+  text-align: center;
+  line-height: 80rpx;
+}
+.anticon-edit:before {
+  content: "\E692";
+  font-size: 24px;
+}
+.w0 .weui-cell__bd {
+  width: auto;
+  -webkit-box-flex: none;
+  -webkit-flex: none;
+  -ms-flex: none0;
+  flex: none;
+  color: #999;
+}
+.w0 .weui-cell__ft {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  color: #4c4c4c;
+}
+
+.joinCount-txt {
+  color: #1890ff;
+}
+
+.list-item-action {
+  width: 100px;
+  position: relative;
+}
+
+.list-item-action icon {
+  line-height: 2;
+}
+.list-item-action icon::before {
+  padding-right: 5px;
+}
+ .weui-grids {
+  border: none;
+}
+.weui-grid {
+  border: none;
+  width: 25%;
+}
+.weui-grid__icon {
+  display:block;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  border-radius: 8px; 
+  background-color: #eee;
+} 

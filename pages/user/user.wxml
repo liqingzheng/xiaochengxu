@@ -1,0 +1,44 @@
+<view class="page g-mrg-top10">
+  <view class="page__bd">
+    <!-- 头像 -->
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_appmsg">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="{{avator}}"></image>
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">{{nickName}}</view>
+            <view class="weui-media-box__desc">
+              <icon class="{{ 'anticon ' + gender }}"></icon>
+              <text class='mobile'>{{mobile}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 活动 -->
+    <view class="weui-cells weui-cells_after-title g-mrg-top10">
+      <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../viewMy/viewMy">
+        <view class="weui-cell__bd">我创建的活动</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../viewJoin/viewJoin">
+        <view class="weui-cell__bd">我加入的活动</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+    <!-- 设置 -->
+    <view class="weui-cells weui-cells_after-title g-mrg-top10">
+      <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="{{'../setting/setting?mobile=' + mobile}}">
+        <view class="weui-cell__bd">修改手机号码</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 底部导航 -->
+  <view class="footer-btn">
+    <navigator url="../CreateActivity/CreateActivity" class="nav bubble active" plain hover-class='none'>创建活动</navigator>
+    <button disabled='{{true}}' bindtap="joinActivity" class="nav bubble" plain hover-class='none'>用户中心</button>
+  </view>
+</view>

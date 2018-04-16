@@ -1,0 +1,10 @@
+<!--components/alert/alert.wxml-->
+<view class="weui-msg">
+  <view class="weui-msg__icon-area">
+    <icon type="{{type}}" size="{{iconSize}}"></icon>
+  </view>
+  <view class="weui-msg__text-area">
+    <view class="weui-msg__title">{{title}}</view>
+    <view class="weui-msg__desc">{{msg}}</view>
+  </view>
+</view>

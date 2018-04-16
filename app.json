@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/ViewActivity/ViewActivity",
+    "pages/CreateActivity/CreateActivity",
+    "pages/user/user",
+    "pages/viewJoin/viewJoin",
+    "pages/viewMy/viewMy",
+    "pages/member/member",
+    "pages/update/update",
+    "pages/setting/setting",
+    "components/alert/alert",
+    "components/modal/modal"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#eee"
+  }
+}

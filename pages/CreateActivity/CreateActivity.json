@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "创建活动",
+  "usingComponents": {
+    "modal": "../../components/modal/modal"
+  }
+}

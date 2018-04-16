@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我加入的活动",
+  "usingComponents": {
+    "alert": "../../components/alert/alert"
+  }
+}
